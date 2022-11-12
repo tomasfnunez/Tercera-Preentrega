@@ -1,0 +1,393 @@
+/*Variables*/
+$color_principal: orange;
+$tipografia_principal:'Poppins', sans-serif;
+
+
+*{  margin: 0;
+    padding: 0;
+}
+
+
+
+/* Contenido Body*/
+
+
+body{
+    background-color: white;
+    height: 300px;
+    width: 100%;
+}
+
+/*Contenido de Headers y Nav*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background-image: url(../img/fotoheader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+nav{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    background-color: black;
+
+    a{
+        position: relative;
+        text-decoration: none;
+        font-family: $tipografia_principal;
+        color: white;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        padding: 0 10px;
+    }
+        a:hover{
+        width: 100%;
+        color: $color_principal;
+    }
+    
+}
+
+
+
+
+
+/*Contenido de los mains*/
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/fondo3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1800px;
+    width: 100%;
+
+}
+
+
+
+/* Main Index*/
+.img_main{
+    height: 100%;
+    width: 100%;
+
+}
+
+
+
+ul{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+}
+
+.padre{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.hijo{
+flex: 25%;
+padding: 5px;
+}
+
+
+
+/*Main Productos*/
+
+#grilla_productos { 
+    display: grid;
+    grid-template-rows: 350px 350px 350px;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-areas:"a1 a2 a3"
+                        "a4 a5 a6"
+                        "a7 a8 a9";
+    column-gap: 20px;
+    row-gap: 60px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.hijo_productos{
+    width: 80%;
+    height: 80%;
+    transition: all 1s;
+    filter: grayscale(100%);
+}
+
+.hijo_productos:hover{
+    transform: scale(1.2,1.2);
+    filter: grayscale(0);
+}
+
+.img_deck{
+    width: 100%;
+    height: 100%;
+    }
+
+#boton_producto{
+        text-decoration: none;
+        padding: 20px;
+        font-size: 1.5rem;
+        position:relative;
+        background-color: $color_principal;
+        color: black;
+        border-radius: 50px;
+        }
+
+
+/* Main Torneos*/
+
+.contenedor_tabla{
+    width: 50%;
+    height: 50%;
+    margin: 10%;
+    display: flex;
+    position: relative;
+
+    }
+
+    table{
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        border-collapse: collapse;
+        
+    }
+
+    th, td{
+        padding: 20px;
+    }
+
+    th{
+        font-size: 50px;
+        font-family: $tipografia_principal;
+    }
+
+    td{
+        font-size: 20px;
+        font-family: $tipografia_principal;
+    }
+
+    thead{
+        background-color: black;
+        color: white;
+        border-bottom: solid 5px $color_principal;
+    }
+
+    tr:nth-child(even){
+        background-color: #ddd;
+    }
+    
+    tr:hover td{
+        background-color: $color_principal;
+        color: black;
+    }
+
+.mapa{
+    height: 20%;
+    width: 30%;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+
+/* Main Contacto*/
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.8);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+h2{
+    color: $color_principal;
+    text-align: center;
+    font-family: $tipografia_principal;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border:none;
+    font-family: $tipografia_principal;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton_form{
+    background-color: $color_principal;
+    color: black;
+    padding: 20px;
+}
+
+    
+#boton_form:hover{
+    cursor: pointer;
+}
+
+
+
+    @media only screen and (max-width:500px){
+        
+        form{
+            width: 100%;}
+    }
+
+
+/* Main Fotos o Galeria*/
+
+#galeria_padre { 
+    display: grid;
+    grid-template-rows: 350px 350px 350px;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-areas:"a1 a2 a3"
+                        "a4 a5 a6"
+                        "a7 a8 a9";
+    column-gap: 20px;
+    row-gap: 60px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.galeria_fotos{
+    width: 80%;
+    height: 80%;
+    transition: all 1s;
+}
+
+.galeria_fotos:hover{
+    transform: scale(1.2,1.2);
+}
+
+
+
+.img_deck{
+    width: 100%;
+    height: 100%;
+    }
+
+    @media only screen and (max-width:500px){
+    #galeria_padre{
+        display: grid;
+        height: 20000px;
+        grid-template-columns: 90%;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        grid-template-areas: 
+                        "foto1"
+                        "foto2"
+                        "foto3"
+                        "foto4"
+                        "foto5"
+                        "foto6";
+        align-content: space-around;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+}
+
+/* Contenido Footer*/
+
+footer{
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    
+    h3, p{
+        color: $color_principal;
+        font-family: $tipografia_principal;
+    }
+}
+
+
+
+
+
+/* MediaQueri*/
+@media only screen and (max-width:500px){
+
+    nav{
+        height: 70%;
+        width: 100%;
+    }
+    
+    
+    
+    
+    
+    ul{
+    height: 250px;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    }
+
+    li{
+        font-size: 20px;
+    }
+
+/*Media al HTML de productos*/
+    #grilla_productos{
+        display: grid;
+        height: 20000px;
+        grid-template-columns: 90%;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        grid-template-areas: 
+                        "foto1"
+                        "foto2"
+                        "foto3"
+                        "foto4"
+                        "foto5"
+                        "foto6";
+        align-content: space-around;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    main{
+        height: 4000px;
+    }
+
+
+    .hijo{
+        flex: 100%;
+    }
+}
